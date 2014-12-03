@@ -13,5 +13,5 @@ Pod::Spec.new do |spec|
   spec.ios.source_files = 'MSKeychainManager/*.{h,m}'
   spec.osx.source_files = 'MSKeychainManager/*.{h,m}'
   
-  spec.dependency 'LittleMagic'
+  spec.dependency 'MSLittleMagic', '~> 0.0.1'
 end
