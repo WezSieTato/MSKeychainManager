@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7B85C5FE3391BDC714361972 /* libPods-MSKeychainManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4503367303850768F68E929 /* libPods-MSKeychainManager.a */; };
-		D39B86F91A2F52CE00FC0D39 /* MSKeychainManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D39B86F81A2F52CE00FC0D39 /* MSKeychainManagerTests.m */; };
+		D3599B761A6FC7A200923BB3 /* MSKeychainPair.m in Sources */ = {isa = PBXBuildFile; fileRef = D3599B751A6FC7A200923BB3 /* MSKeychainPair.m */; };
+		D3599B781A6FD28E00923BB3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3599B771A6FD28E00923BB3 /* UIKit.framework */; };
+		D3599B7A1A6FD29600923BB3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3599B791A6FD29600923BB3 /* Security.framework */; };
+		D39B86F91A2F52CE00FC0D39 /* MSKeychainPairTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D39B86F81A2F52CE00FC0D39 /* MSKeychainPairTests.m */; };
 		D39B87081A2F530600FC0D39 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D39B87041A2F530600FC0D39 /* AppDelegate.m */; };
 		D39B87091A2F530600FC0D39 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D39B87051A2F530600FC0D39 /* Images.xcassets */; };
-		D39B870A1A2F530600FC0D39 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D39B87061A2F530600FC0D39 /* Info.plist */; };
 		D39B870B1A2F530600FC0D39 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D39B87071A2F530600FC0D39 /* main.m */; };
 		D39B870E1A2F53EA00FC0D39 /* MSKeychainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D39B870D1A2F53EA00FC0D39 /* MSKeychainManager.m */; };
 /* End PBXBuildFile section */
@@ -27,11 +28,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		14D7E305C91D99021FA45E7B /* Pods-MSKeychainManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSKeychainManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MSKeychainManager/Pods-MSKeychainManager.debug.xcconfig"; sourceTree = "<group>"; };
+		D3599B741A6FC7A200923BB3 /* MSKeychainPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSKeychainPair.h; sourceTree = "<group>"; };
+		D3599B751A6FC7A200923BB3 /* MSKeychainPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSKeychainPair.m; sourceTree = "<group>"; };
+		D3599B771A6FD28E00923BB3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D3599B791A6FD29600923BB3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D39B86D91A2F52CE00FC0D39 /* MSKeychainManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSKeychainManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D39B86F21A2F52CE00FC0D39 /* MSKeychainManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MSKeychainManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D39B86F71A2F52CE00FC0D39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D39B86F81A2F52CE00FC0D39 /* MSKeychainManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSKeychainManagerTests.m; sourceTree = "<group>"; };
+		D39B86F81A2F52CE00FC0D39 /* MSKeychainPairTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSKeychainPairTests.m; sourceTree = "<group>"; };
 		D39B87031A2F530600FC0D39 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D39B87041A2F530600FC0D39 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D39B87051A2F530600FC0D39 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -39,8 +43,6 @@
 		D39B87071A2F530600FC0D39 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D39B870C1A2F53EA00FC0D39 /* MSKeychainManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSKeychainManager.h; sourceTree = "<group>"; };
 		D39B870D1A2F53EA00FC0D39 /* MSKeychainManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSKeychainManager.m; sourceTree = "<group>"; };
-		D77668F01E0FF5DEAAFA3167 /* Pods-MSKeychainManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSKeychainManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-MSKeychainManager/Pods-MSKeychainManager.release.xcconfig"; sourceTree = "<group>"; };
-		E4503367303850768F68E929 /* libPods-MSKeychainManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MSKeychainManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +50,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B85C5FE3391BDC714361972 /* libPods-MSKeychainManager.a in Frameworks */,
+				D3599B7A1A6FD29600923BB3 /* Security.framework in Frameworks */,
+				D3599B781A6FD28E00923BB3 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,19 +65,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5390B506BEADB5E732A15DA3 /* Pods */ = {
+		D3599B7C1A6FD32600923BB3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				14D7E305C91D99021FA45E7B /* Pods-MSKeychainManager.debug.xcconfig */,
-				D77668F01E0FF5DEAAFA3167 /* Pods-MSKeychainManager.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		AE9F7D61B63A7D4CFE76D5C0 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E4503367303850768F68E929 /* libPods-MSKeychainManager.a */,
+				D3599B791A6FD29600923BB3 /* Security.framework */,
+				D3599B771A6FD28E00923BB3 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -85,9 +80,8 @@
 				D39B87021A2F530600FC0D39 /* Example */,
 				D39B86DB1A2F52CE00FC0D39 /* MSKeychainManager */,
 				D39B86F51A2F52CE00FC0D39 /* MSKeychainManagerTests */,
+				D3599B7C1A6FD32600923BB3 /* Frameworks */,
 				D39B86DA1A2F52CE00FC0D39 /* Products */,
-				5390B506BEADB5E732A15DA3 /* Pods */,
-				AE9F7D61B63A7D4CFE76D5C0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +99,8 @@
 			children = (
 				D39B870C1A2F53EA00FC0D39 /* MSKeychainManager.h */,
 				D39B870D1A2F53EA00FC0D39 /* MSKeychainManager.m */,
+				D3599B741A6FC7A200923BB3 /* MSKeychainPair.h */,
+				D3599B751A6FC7A200923BB3 /* MSKeychainPair.m */,
 			);
 			path = MSKeychainManager;
 			sourceTree = "<group>";
@@ -112,7 +108,7 @@
 		D39B86F51A2F52CE00FC0D39 /* MSKeychainManagerTests */ = {
 			isa = PBXGroup;
 			children = (
-				D39B86F81A2F52CE00FC0D39 /* MSKeychainManagerTests.m */,
+				D39B86F81A2F52CE00FC0D39 /* MSKeychainPairTests.m */,
 				D39B86F61A2F52CE00FC0D39 /* Supporting Files */,
 			);
 			path = MSKeychainManagerTests;
@@ -145,11 +141,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D39B86FC1A2F52CE00FC0D39 /* Build configuration list for PBXNativeTarget "MSKeychainManager" */;
 			buildPhases = (
-				251A381DABA33729586C817F /* Check Pods Manifest.lock */,
 				D39B86D51A2F52CE00FC0D39 /* Sources */,
 				D39B86D61A2F52CE00FC0D39 /* Frameworks */,
 				D39B86D71A2F52CE00FC0D39 /* Resources */,
-				778ED3A5F947486AE9947BC4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,7 +214,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D39B870A1A2F530600FC0D39 /* Info.plist in Resources */,
 				D39B87091A2F530600FC0D39 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,39 +227,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		251A381DABA33729586C817F /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		778ED3A5F947486AE9947BC4 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MSKeychainManager/Pods-MSKeychainManager-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		D39B86D51A2F52CE00FC0D39 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -275,6 +235,7 @@
 				D39B870E1A2F53EA00FC0D39 /* MSKeychainManager.m in Sources */,
 				D39B870B1A2F530600FC0D39 /* main.m in Sources */,
 				D39B87081A2F530600FC0D39 /* AppDelegate.m in Sources */,
+				D3599B761A6FC7A200923BB3 /* MSKeychainPair.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D39B86F91A2F52CE00FC0D39 /* MSKeychainManagerTests.m in Sources */,
+				D39B86F91A2F52CE00FC0D39 /* MSKeychainPairTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,7 +338,6 @@
 		};
 		D39B86FD1A2F52CE00FC0D39 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14D7E305C91D99021FA45E7B /* Pods-MSKeychainManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/Example/Info.plist";
@@ -388,7 +348,6 @@
 		};
 		D39B86FE1A2F52CE00FC0D39 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D77668F01E0FF5DEAAFA3167 /* Pods-MSKeychainManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/Example/Info.plist";
