@@ -7,12 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <MSLittleMagic/MSPair.h>
+#import "MSKeychainPair.h"
 
 @interface MSKeychainManager : NSObject
 
 -(void)saveUsername:(NSString*)user withPassword:(NSString*)pass forServer:(NSString*)server;
 -(void)removeAllCredentialsForServer:(NSString*)server;
--(MSPair*)getCredentialsForServer:(NSString*)server;
+-(MSKeychainPair*)getCredentialsForServer:(NSString*)server;
 
 @end

@@ -11,7 +11,7 @@
 
 @implementation MSKeychainManager
 
--(void) saveUsername:(NSString*)user withPassword:(NSString*)pass forServer:(NSString*)server {
+-(void)saveUsername:(NSString*)user withPassword:(NSString*)pass forServer:(NSString*)server {
     
     // Create dictionary of search parameters
     NSDictionary* dict = [NSDictionary dictionaryWithObjectsAndKeys:(__bridge id)(kSecClassInternetPassword),  kSecClass, server, kSecAttrServer, kCFBooleanTrue, kSecReturnAttributes, nil];
@@ -27,17 +27,17 @@
     err = SecItemAdd((__bridge CFDictionaryRef) dict, NULL);
 }
 
--(void) removeAllCredentialsForServer:(NSString*)server {
+-(void)removeAllCredentialsForServer:(NSString*)server {
     
     // Create dictionary of search parameters
     NSDictionary* dict = [NSDictionary dictionaryWithObjectsAndKeys:(__bridge id)(kSecClassInternetPassword),  kSecClass, server, kSecAttrServer, kCFBooleanTrue, kSecReturnAttributes, kCFBooleanTrue, kSecReturnData, nil];
     
     // Remove any old values from the keychain
-//    OSStatus err =
+    //    OSStatus err =
     SecItemDelete((__bridge CFDictionaryRef) dict);
 }
 
--(MSPair*)getCredentialsForServer:(NSString*)server {
+-(MSKeychainPair*)getCredentialsForServer:(NSString*)server {
     
     // Create dictionary of search parameters
     NSDictionary* dict = [NSDictionary dictionaryWithObjectsAndKeys:(__bridge id)(kSecClassInternetPassword),  kSecClass, server, kSecAttrServer, kCFBooleanTrue, kSecReturnAttributes, kCFBooleanTrue, kSecReturnData, nil];
@@ -45,7 +45,7 @@
     // Look up server in the keychain
     NSDictionary* found = nil;
     CFDictionaryRef foundCF;
-//    OSStatus err =
+    //    OSStatus err =
     SecItemCopyMatching((__bridge CFDictionaryRef) dict, (CFTypeRef*)&foundCF);
     
     found = (__bridge NSDictionary*)(foundCF);
@@ -54,7 +54,7 @@
     // Found
     NSString* user = (NSString*) [found objectForKey:(__bridge id)(kSecAttrAccount)];
     NSString* pass = [[NSString alloc] initWithData:[found objectForKey:(__bridge id)(kSecValueData)] encoding:NSUTF8StringEncoding];
-    return [MSPair pairWithFirst:user andSecond:pass];
+    return [MSKeychainPair pairWithUsername:user andPassword:pass];
 }
 
 @end
