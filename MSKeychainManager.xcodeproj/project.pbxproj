@@ -43,6 +43,7 @@
 		D39B87071A2F530600FC0D39 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D39B870C1A2F53EA00FC0D39 /* MSKeychainManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSKeychainManager.h; sourceTree = "<group>"; };
 		D39B870D1A2F53EA00FC0D39 /* MSKeychainManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSKeychainManager.m; sourceTree = "<group>"; };
+		D3A029841ACEC41300AD166C /* MSKeychainManager.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = MSKeychainManager.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +78,7 @@
 		D39B86D01A2F52CE00FC0D39 = {
 			isa = PBXGroup;
 			children = (
+				D3A029841ACEC41300AD166C /* MSKeychainManager.podspec */,
 				D39B87021A2F530600FC0D39 /* Example */,
 				D39B86DB1A2F52CE00FC0D39 /* MSKeychainManager */,
 				D39B86F51A2F52CE00FC0D39 /* MSKeychainManagerTests */,

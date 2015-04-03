@@ -1,6 +1,6 @@
 //
 //  MSKeychainManager.m
-//  MYOrse
+//  MSKeychainManager
 //
 //  Created by Marcin Stepnowski on 25/11/14.
 //  Copyright (c) 2014 siema. All rights reserved.
@@ -10,6 +10,18 @@
 #import <Security/Security.h>
 
 @implementation MSKeychainManager
+
+-(void)saveUsername:(NSString *)user withPassword:(NSString *)pass{
+    [self saveUsername:user withPassword:pass forServer:[[NSBundle mainBundle] bundleIdentifier]];
+}
+
+-(void)removeAllCredentials{
+    [self removeAllCredentialsForServer:[[NSBundle mainBundle] bundleIdentifier]];
+}
+
+-(MSKeychainPair*)getCredentials{
+    return [self getCredentialsForServer:[[NSBundle mainBundle] bundleIdentifier]];
+}
 
 -(void)saveUsername:(NSString*)user withPassword:(NSString*)pass forServer:(NSString*)server {
     
