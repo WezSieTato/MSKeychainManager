@@ -14,7 +14,8 @@
 		D39B87081A2F530600FC0D39 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D39B87041A2F530600FC0D39 /* AppDelegate.m */; };
 		D39B87091A2F530600FC0D39 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D39B87051A2F530600FC0D39 /* Images.xcassets */; };
 		D39B870B1A2F530600FC0D39 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D39B87071A2F530600FC0D39 /* main.m */; };
-		D39B870E1A2F53EA00FC0D39 /* MSKeychainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D39B870D1A2F53EA00FC0D39 /* MSKeychainManager.m */; };
+		D39B870E1A2F53EA00FC0D39 /* MSPairKeychainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D39B870D1A2F53EA00FC0D39 /* MSPairKeychainManager.m */; };
+		D3EB8F591B15D0BE008A7893 /* MSSimpleKeychainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EB8F581B15D0BE008A7893 /* MSSimpleKeychainManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,9 +42,12 @@
 		D39B87051A2F530600FC0D39 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D39B87061A2F530600FC0D39 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D39B87071A2F530600FC0D39 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D39B870C1A2F53EA00FC0D39 /* MSKeychainManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSKeychainManager.h; sourceTree = "<group>"; };
-		D39B870D1A2F53EA00FC0D39 /* MSKeychainManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSKeychainManager.m; sourceTree = "<group>"; };
+		D39B870C1A2F53EA00FC0D39 /* MSPairKeychainManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSPairKeychainManager.h; sourceTree = "<group>"; };
+		D39B870D1A2F53EA00FC0D39 /* MSPairKeychainManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSPairKeychainManager.m; sourceTree = "<group>"; };
 		D3A029841ACEC41300AD166C /* MSKeychainManager.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = MSKeychainManager.podspec; sourceTree = "<group>"; };
+		D3EB8F571B15D0BE008A7893 /* MSSimpleKeychainManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSimpleKeychainManager.h; sourceTree = "<group>"; };
+		D3EB8F581B15D0BE008A7893 /* MSSimpleKeychainManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSimpleKeychainManager.m; sourceTree = "<group>"; };
+		D3EB8F5A1B15D238008A7893 /* MSKeychainManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSKeychainManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +103,13 @@
 		D39B86DB1A2F52CE00FC0D39 /* MSKeychainManager */ = {
 			isa = PBXGroup;
 			children = (
-				D39B870C1A2F53EA00FC0D39 /* MSKeychainManager.h */,
-				D39B870D1A2F53EA00FC0D39 /* MSKeychainManager.m */,
+				D39B870C1A2F53EA00FC0D39 /* MSPairKeychainManager.h */,
+				D39B870D1A2F53EA00FC0D39 /* MSPairKeychainManager.m */,
 				D3599B741A6FC7A200923BB3 /* MSKeychainPair.h */,
 				D3599B751A6FC7A200923BB3 /* MSKeychainPair.m */,
+				D3EB8F571B15D0BE008A7893 /* MSSimpleKeychainManager.h */,
+				D3EB8F581B15D0BE008A7893 /* MSSimpleKeychainManager.m */,
+				D3EB8F5A1B15D238008A7893 /* MSKeychainManager.h */,
 			);
 			path = MSKeychainManager;
 			sourceTree = "<group>";
@@ -234,8 +241,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D39B870E1A2F53EA00FC0D39 /* MSKeychainManager.m in Sources */,
+				D39B870E1A2F53EA00FC0D39 /* MSPairKeychainManager.m in Sources */,
 				D39B870B1A2F530600FC0D39 /* main.m in Sources */,
+				D3EB8F591B15D0BE008A7893 /* MSSimpleKeychainManager.m in Sources */,
 				D39B87081A2F530600FC0D39 /* AppDelegate.m in Sources */,
 				D3599B761A6FC7A200923BB3 /* MSKeychainPair.m in Sources */,
 			);

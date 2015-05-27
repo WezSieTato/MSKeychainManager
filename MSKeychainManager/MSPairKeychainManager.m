@@ -6,24 +6,24 @@
 //  Copyright (c) 2014 siema. All rights reserved.
 //
 
-#import "MSKeychainManager.h"
+#import "MSPairKeychainManager.h"
 #import <Security/Security.h>
 
-@implementation MSKeychainManager
+@implementation MSPairKeychainManager
 
--(void)saveUsername:(NSString *)user withPassword:(NSString *)pass{
++(void)saveUsername:(NSString *)user withPassword:(NSString *)pass{
     [self saveUsername:user withPassword:pass forServer:[[NSBundle mainBundle] bundleIdentifier]];
 }
 
--(void)removeAllCredentials{
++(void)removeAllCredentials{
     [self removeAllCredentialsForServer:[[NSBundle mainBundle] bundleIdentifier]];
 }
 
--(MSKeychainPair*)getCredentials{
++(MSKeychainPair*)getCredentials{
     return [self getCredentialsForServer:[[NSBundle mainBundle] bundleIdentifier]];
 }
 
--(void)saveUsername:(NSString*)user withPassword:(NSString*)pass forServer:(NSString*)server {
++(void)saveUsername:(NSString*)user withPassword:(NSString*)pass forServer:(NSString*)server {
     
     // Create dictionary of search parameters
     NSDictionary* dict = [NSDictionary dictionaryWithObjectsAndKeys:(__bridge id)(kSecClassInternetPassword),  kSecClass, server, kSecAttrServer, kCFBooleanTrue, kSecReturnAttributes, nil];
@@ -39,7 +39,7 @@
     err = SecItemAdd((__bridge CFDictionaryRef) dict, NULL);
 }
 
--(void)removeAllCredentialsForServer:(NSString*)server {
++(void)removeAllCredentialsForServer:(NSString*)server {
     
     // Create dictionary of search parameters
     NSDictionary* dict = [NSDictionary dictionaryWithObjectsAndKeys:(__bridge id)(kSecClassInternetPassword),  kSecClass, server, kSecAttrServer, kCFBooleanTrue, kSecReturnAttributes, kCFBooleanTrue, kSecReturnData, nil];
@@ -49,7 +49,7 @@
     SecItemDelete((__bridge CFDictionaryRef) dict);
 }
 
--(MSKeychainPair*)getCredentialsForServer:(NSString*)server {
++(MSKeychainPair*)getCredentialsForServer:(NSString*)server {
     
     // Create dictionary of search parameters
     NSDictionary* dict = [NSDictionary dictionaryWithObjectsAndKeys:(__bridge id)(kSecClassInternetPassword),  kSecClass, server, kSecAttrServer, kCFBooleanTrue, kSecReturnAttributes, kCFBooleanTrue, kSecReturnData, nil];

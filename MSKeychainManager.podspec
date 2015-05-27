@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = 'MSKeychainManager'
-  spec.version = '0.1.1'
+  spec.version = '0.2.0'
   spec.authors = { 'Marcin Stepnowski' => 'le0n.uo@gmail.com' }
   spec.homepage = 'https://github.com/WezSieTato/MSKeychainManager'
   spec.summary = 'MSKeychainManager is simply class for saving one username/password pair per server.'
