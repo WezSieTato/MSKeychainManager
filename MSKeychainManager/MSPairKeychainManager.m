@@ -57,8 +57,8 @@
     // Look up server in the keychain
     NSDictionary* found = nil;
     CFDictionaryRef foundCF;
-    //    OSStatus err =
-    SecItemCopyMatching((__bridge CFDictionaryRef) dict, (CFTypeRef*)&foundCF);
+    OSStatus err = SecItemCopyMatching((__bridge CFDictionaryRef) dict, (CFTypeRef*)&foundCF);
+    if(err == -25300) return nil;
     
     found = (__bridge NSDictionary*)(foundCF);
     if (!found) return nil;
